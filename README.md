@@ -1,14 +1,15 @@
 
 # MSAuthenticationKey
 
+MSAuthenticationKey es programa complementario para el addon [plugin.video.movistarplus](https://github.com/Paco8/plugin.video.movistarplus).
 Este es un programa para poder obtener un fichero *.key para poder
-iniciar sesión en el plugin [plugin.video.movistarplus](https://github.com/Paco8/plugin.video.movistarplus).
+iniciar sesión en `plugin.video.movistarplus`.
 
 El programa abrirá una ventana de Google Chrome (vale también Chromium o Brave), con la web
 de movistarplus, donde deberás iniciar sesión. Hecho eso el programa obtendrá un token de la web,
 cerrará la ventana de Chrome y guardará ese token en un fichero en el disco (`msauthentication.key`).
 
-Ese fichero key se puede usar para poder iniciar sesión en el plugin `plugin.video.movistarplus`. 
+Este fichero key se puede usar para poder iniciar sesión en `plugin.video.movistarplus`. 
 Puedes usar el fichero key en multiples dispositivos.
 
 ## Descarga
@@ -28,7 +29,7 @@ guardado en la misma carpeta el token en el fichero `msauthentication.key`.
 carpeta que sea accesible por Kodi (por ejemplo `Download`).
 - En Kodi, entra en `plugin.video.movistarplus` y selecciona
 `Iniciar sesión con un fichero key`.
-Si todo ha ido bien cargará el menú principal del plugin ya podrás
+Si todo ha ido bien se cargará el menú principal y ya podrás
 acceder a las diferentes secciones.
 
 
