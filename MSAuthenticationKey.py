@@ -50,12 +50,19 @@ class Main(object):
                  TextFormat.COL_LIGHT_BLUE + TextFormat.BOLD)
         show_msg('')
         show_msg('Disclaimer:')
-        show_msg('This script and source code available on GitHub are provided "as is" without\r\nwarranty of any kind, either express or implied. Use at your own risk. The use\r\nof the software is done at your own discretion and risk with the agreement that\r\nyou will be solely responsible for any damage resulting from such activities\r\nand you are solely responsible for adequate data protection.',
-                 TextFormat.COL_GREEN)
+        show_msg(
+            'This script and source code available on GitHub are provided "as is" without\r\n'
+            'warranty of any kind, either express or implied. Use at your own risk. The use\r\n'
+            'of the software is done at your own discretion and risk with the agreement\r\n'
+            'that you will be solely responsible for any damage resulting from such\r\n'
+            'activities and you are solely responsible for adequate data protection.',
+            TextFormat.COL_GREEN)
         show_msg('')
         browser_proc = None
         try:
-            input_msg('Pulsa tecla "INTRO" para aceptar el descargo de responsabilidad y empezar,\r\no "CTRL+C" para cancelar', TextFormat.BOLD)
+            input_msg(
+              'Pulsa tecla "INTRO" para aceptar el descargo de responsabilidad y empezar,\r\n'
+              'o "CTRL+C" para cancelar', TextFormat.BOLD)
             browser_proc = open_browser(browser_temp_path)
             self.operations()
         except Warning as exc:
