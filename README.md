@@ -7,7 +7,7 @@ iniciar sesión en `plugin.video.movistarplus`.
 
 El programa abrirá una ventana de Google Chrome (vale también Chromium o Brave), con la web
 de movistarplus, donde deberás iniciar sesión. Hecho eso el programa obtendrá un token de la web,
-cerrará la ventana de Chrome y guardará ese token en un fichero en el disco (`msauthentication.key`).
+cerrará la ventana de Chrome y guardará ese token en un fichero en el disco.
 
 Este fichero key se puede usar para poder iniciar sesión en `plugin.video.movistarplus`. 
 Puedes usar el fichero key en multiples dispositivos.
