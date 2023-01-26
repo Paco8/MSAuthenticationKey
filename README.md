@@ -24,7 +24,7 @@ ventana de Google Chrome en modo incógnito con la web de movistarplus.
 - En esa ventana selecciona la opción `Identifícate` e introduce
 tus credenciales.
 - Si todo ha ido bien la ventana de Chrome se cerrará y se habrá
-guardado en la misma carpeta el token en el fichero `msauthentication.key`.
+guardado en la misma carpeta el token en el fichero `movistarplus.key`.
 - Este fichero cópialo al dispositivo donde quieras usarlo, en una
 carpeta que sea accesible por Kodi (por ejemplo `Download`).
 - En Kodi, entra en `plugin.video.movistarplus` y selecciona
