@@ -249,7 +249,7 @@ def get_browser_path():
 
 def save_data(data, pin):
     data = json.dumps(data, ensure_ascii=False)
-    file = open('msauthentication.key', 'w')
+    file = open('movistarplus.key', 'w')
     file.write(data)
     file.close()
 
