@@ -13,7 +13,7 @@ Este fichero key se puede usar para poder iniciar sesión en `plugin.video.movis
 Puedes usar el fichero key en multiples dispositivos.
 
 ## Descarga
-Existen versiones para Windows, Linux y Mac OS.
+Existen versiones para [Windows](https://github.com/Paco8/MSAuthenticationKey/releases/download/v1.0.0/MSAuthenticationKey-1.0.0-windows.zip), [Linux](https://github.com/Paco8/MSAuthenticationKey/releases/download/v1.0.0/MSAuthenticationKey-1.0.0-xenial.zip) y [Mac OS](https://github.com/Paco8/MSAuthenticationKey/releases/download/v1.0.0/MSAuthenticationKey-1.0.0-macos.zip).
 
 ## Instrucciones de uso
 - Descomprime el fichero zip que has descargado. El zip contiene dos 
