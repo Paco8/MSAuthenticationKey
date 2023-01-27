@@ -40,7 +40,7 @@ URL = 'https://ver.movistarplus.es'
 
 class Main(object):
 
-    app_version = '1.0.0'
+    app_version = '1.0.1'
     _msg_id = 0
     _ws = None
 
@@ -99,23 +99,25 @@ class Main(object):
             raise Warning('Se ha excedido el tiempo máximo para iniciar sesión. Prueba otra vez.')
 
         show_msg('Creando el fichero... por favor espera')
-        # Generate a random PIN for access to "MSAuthentication.key" file
-        pin = random.randint(1000, 9999)
+
+        if not 'access_token' in res['response']:
+          show_msg('Ha fallado el inicio de sesión')
+          return
+
         # Create file data structure
         data = {
             'app_name': 'MSAuthenticationKey',
             'app_version': self.app_version,
             'app_system': 'Windows' if IS_WINDOWS else 'MacOS' if IS_MACOS else 'Linux',
-            'timestamp': int(((datetime.utcnow() + timedelta(days=5)) - datetime(year=1970, month=1, day=1)).total_seconds()),
+            'timestamp': int(time.time()*1000),
             'data': json.dumps(res, ensure_ascii=False)
         }
         # Save the "MSAuthentication.key" file
-        save_data(data, pin)
+        save_data(data)
         # Close the browser
         self.ws_request('Browser.close')
         show_msg('¡Terminado!', TextFormat.COL_BLUE)
-        show_msg('Se ha guardado el fichero "msauthentication.key" en la carpeta actual.', TextFormat.COL_BLUE)
-        #show_msg('Your PIN protection is: {}'.format(pin), TextFormat.COL_BLUE)
+        show_msg('Se ha guardado el fichero "movistarplus.key" en la carpeta actual.', TextFormat.COL_BLUE)
 
 
     def get_browser_debug_endpoint(self):
@@ -251,10 +253,10 @@ def get_browser_path():
                     return path
             except subprocess.CalledProcessError:
                 pass
-    raise Warning('Browser not detected.\r\nTry check if it is installed or specify the path in the BROWSER_PATH field inside "MSAuthenticationKey.py" file')
+    raise Warning('Browser not detected.\r\nCheck if it is installed or specify the path in settings.json, in the field browser-path')
 
 
-def save_data(data, pin):
+def save_data(data):
     data = json.dumps(data, ensure_ascii=False)
     file = open('movistarplus.key', 'w')
     file.write(data)
